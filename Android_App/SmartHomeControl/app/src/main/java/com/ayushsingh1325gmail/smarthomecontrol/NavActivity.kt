@@ -57,8 +57,8 @@ class NavActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
             mProgressDialog.setMessage("Please wait...")
             mProgressDialog.setCancelable(true)
             mProgressDialog.show()
-            pnconfig.setPublishKey("pub-c-7087e6f9-65a8-4608-93c9-7e1264fd5743")
-            pnconfig.setSubscribeKey("sub-c-8091636e-a1d2-11e7-a52c-d6a48d4f2d9f")
+            pnconfig.setPublishKey("your publish key")
+            pnconfig.setSubscribeKey("your sub key")
             pubnub = PubNub(pnconfig)
             pubnub.addListener(object : SubscribeCallback() {
                 override fun status(pubnub: PubNub, status: PNStatus) {
