@@ -18,8 +18,8 @@ flood = False
 quake = False
 
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = "sub-c-8091636e-a1d2-11e7-a52c-d6a48d4f2d9f"
-pnconfig.publish_key = "pub-c-7087e6f9-65a8-4608-93c9-7e1264fd5743"
+pnconfig.subscribe_key = "your sub key"
+pnconfig.publish_key = "your publish key"
 
 pubnub = PubNub(pnconfig)
 
