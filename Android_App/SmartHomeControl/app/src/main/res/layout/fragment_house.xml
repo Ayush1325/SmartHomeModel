@@ -1,0 +1,227 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474F"
+    tools:context="com.ayushsingh1325gmail.smarthomecontrol.HouseFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="main door"
+                    android:textAllCaps="true"
+                    android:textColor="#ECEFF1"
+                    android:textSize="18sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggle_door"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/door_toggle"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="garage door"
+                    android:textAllCaps="true"
+                    android:textColor="#ECEFF1"
+                    android:textSize="18sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggle_garage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/garage_toggle"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Light 1"
+                        android:textAllCaps="true"
+                        android:textColor="#ECEFF1"
+                        android:textSize="18sp" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_light1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/light_toggle"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/light1_intensity_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusedByDefault="true"
+                    android:max="255"
+                    android:padding="10dp"
+                    android:progress="0"
+                    android:scrollbarSize="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Light 2"
+                        android:textAllCaps="true"
+                        android:textColor="#ECEFF1"
+                        android:textSize="18sp" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_light2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/light_toggle"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/light2_intensity_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusedByDefault="true"
+                    android:max="255"
+                    android:padding="10dp"
+                    android:progress="0"
+                    android:scrollbarSize="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="fan 1"
+                        android:textAllCaps="true"
+                        android:textColor="#ECEFF1"
+                        android:textSize="18sp" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_fan1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/fan_toggle"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/fan1_intensity_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusedByDefault="true"
+                    android:max="5"
+                    android:padding="10dp"
+                    android:progress="0"
+                    android:scrollbarSize="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="fan 2"
+                        android:textAllCaps="true"
+                        android:textColor="#ECEFF1"
+                        android:textSize="18sp" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_fan2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/fan_toggle"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/fan2_intensity_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusedByDefault="true"
+                    android:max="5"
+                    android:padding="10dp"
+                    android:progress="0"
+                    android:scrollbarSize="5dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

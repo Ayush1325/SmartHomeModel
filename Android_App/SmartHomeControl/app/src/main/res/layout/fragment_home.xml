@@ -1,0 +1,99 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#263238"
+    tools:context="com.ayushsingh1325gmail.smarthomecontrol.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            tools:text="Wed, 18 Oct 2017"
+            android:id="@+id/date"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#ECEFF1"
+            android:textSize="22sp" />
+
+        <ImageView
+            tools:src="@drawable/suny"
+            android:id="@+id/weather"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    tools:text="32.5"
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#ECEFF1"
+                    android:textSize="90sp" />
+
+                <TextView
+                    android:layout_toRightOf="@id/temp"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="&#xb0;C"
+                    android:gravity="left"
+                    android:textColor="#ECEFF1"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    tools:text="43.2"
+                    android:id="@+id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#ECEFF1"
+                    android:textSize="90sp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:text="%"
+                        android:textColor="#ECEFF1"
+                        android:textSize="45sp" />
+
+                    <ImageView
+                        android:paddingBottom="15dp"
+                        android:src="@drawable/drop"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

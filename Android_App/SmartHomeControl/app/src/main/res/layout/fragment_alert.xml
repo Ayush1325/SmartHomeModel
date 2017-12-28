@@ -1,0 +1,48 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minWidth="200dp"
+    android:minHeight="200dp"
+    android:padding="20dp"
+    android:gravity="center"
+    tools:context="com.ayushsingh1325gmail.smarthomecontrol.AlertFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="fire"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:padding="10dp"
+        android:id="@+id/alertImageId"
+        tools:src="@drawable/house_fire"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="110dp"
+        android:layout_height="110dp" />
+
+    <TextView
+        android:id="@+id/alertContent"
+        android:gravity="center"
+        tools:text="There might be fire in the house"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/alertButton"
+        tools:text="Stop Alarm"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

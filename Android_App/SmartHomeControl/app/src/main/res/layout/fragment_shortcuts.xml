@@ -1,0 +1,110 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474F"
+    tools:context="com.ayushsingh1325gmail.smarthomecontrol.Shortcuts">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="power off"
+                android:textAllCaps="true"
+                android:textColor="#ECEFF1"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/toggle_poweroff"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/power_off"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Good Night"
+                android:textAllCaps="true"
+                android:textColor="#ECEFF1"
+                android:textSize="18sp" />
+
+            <ToggleButton
+                android:id="@+id/toggle_night_mode"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/good_night"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Theft Alarm"
+                android:textAllCaps="true"
+                android:textColor="#ECEFF1"
+                android:textSize="18sp" />
+
+            <ToggleButton
+                android:id="@+id/toggle_burglary_mode"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/burglary_toggle"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Fire Alarm"
+                android:textAllCaps="true"
+                android:textColor="#ECEFF1"
+                android:textSize="18sp" />
+
+            <ToggleButton
+                android:id="@+id/toggle_fire_mode"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/fire_alarm_toggle"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
