@@ -1,20 +1,20 @@
 #include <DHT.h>
 #include <Servo.h>
 #define DHTPIN 2     // what pin we're connected to
-#define DHTTYPE DHT22 
+#define DHTTYPE DHT11 
 DHT dht(DHTPIN, DHTTYPE);
 
 const int flood_pin = A3;
 const int vib_pin = A4;
 const int pir_pin = A5;
-const int rain_sensor_pin = 4;
+const int rain_sensor_pin = 10;
 const int led1_pin = 3;
 const int ldr_sensor_pin = A0;
 const int fan1_pin = 5;
 const int car_sensor_pin = 7;
 const int flame_sensor_pin = A2;
 const int gas_sensor_pin = A1;
-const int buzzer = 10;
+const int buzzer = 4;
 const int led2_pin = 6;
 const int fan2_pin = 11;
 const int mainDoor_pin = 8;
@@ -35,15 +35,22 @@ void setup() {
   Serial.begin(9600);
   pinMode(rain_sensor_pin, INPUT);
   pinMode(led1_pin, OUTPUT);
+  pinMode(led2_pin, OUTPUT);
+  pinMode(buzzer, OUTPUT);
   pinMode(ldr_sensor_pin, INPUT);
   pinMode(fan1_pin, OUTPUT);
+  pinMode(fan2_pin, OUTPUT);
   pinMode(car_sensor_pin, INPUT);
   pinMode(flame_sensor_pin, INPUT);
   pinMode(gas_sensor_pin, INPUT);
   pinMode(pir_pin, INPUT);
   pinMode(flood_pin, INPUT);
+  pinMode(vib_pin, INPUT);
   digitalWrite(led1_pin, LOW);
   digitalWrite(fan1_pin, LOW);
+  digitalWrite(led2_pin, LOW);
+  digitalWrite(fan2_pin, LOW);
+  digitalWrite(buzzer, LOW);
   mainDoor_servo.attach(mainDoor_pin);
   garageDoor_servo.attach(garageDoor_pin);
   dht.begin(); 
@@ -101,6 +108,7 @@ void action(){
     analogWrite(fan2_pin, message.substring(4).toInt());
   }else if (message.startsWith("b: ")){
     digitalWrite(buzzer, message.substring(3).toInt());
+    Serial.println(message.substring(3).toInt());
   }else if (message.startsWith("pir: ")){
     pir = message.substring(5).toInt();
   }else if (message.startsWith("flood: ")){
@@ -115,9 +123,9 @@ void action(){
     }
   }else if (message.startsWith("garage_door: ")){
     if (message.substring(13).toInt() == 1){
-      garageDoor_servo.write(90);
+      garageDoor_servo.write(75);
     }else {
-      garageDoor_servo.write(0);
+      garageDoor_servo.write(170);
     }
   }
 }
